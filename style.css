@@ -1,0 +1,371 @@
+/* Menu */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    --color1: #ffffff ;
+    --color2: #111111;
+}
+body::-webkit-scrollbar {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+}
+.logo img {width: 40px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: ""; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgb(17, 197, 182);
+    transition: 0.60s ease-in-out;
+}
+.menu li a:hover:after {width: 90%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: #fffffffa;
+    cursor: pointer;
+    font-size: 1.9rem;
+    display: none;
+}
+.open-menu {
+    top: 60%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 10px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color:  #111111;
+        transition: all 0.9s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+
+
+
+
+/* cart */
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 40px;
+    direction: rtl;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 80px 0; /* مسافة من الأعلى والأسفل */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    width: 280px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    transition: 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  }
+  
+  .card .icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #11c5b6;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .discord-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #11c5b6;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .discord-btn:hover {
+    background-color: #0ea4aa;
+    color: #fff;
+  }
+  
+
+
+
+/* line  */
+
+ 
+.glowing-line {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(6deg, #0b7d8be0, #0f87a596, #00b7ffbe);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 10px rgb(17, 197, 182);
+    animation: glowMove 2s linear infinite;
+    top:-1000 ; /* ضع الخط في أعلى الصفحة */
+    left: -1000; /* ابدأ من الحافة اليسرى */
+}
+
+/* حركة التاثير   */
+@keyframes glowMove {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+ /* welcome */
+
+ 
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #111111; /* Background color */
+    color: #ffffff; /* Text color */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+.welcome-text {
+    font-size: 4rem; /* Large text size */
+    font-weight: bold;
+    text-align: center;  
+    animation: fadeIn 3s ease-in-out infinite alternate;  
+}
+
+ @keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);  
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);  
+    }
+}
+
+/* خطوط */
+ 
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* تأكد من أن القيمة ليست عالية جدًا */
+    pointer-events: none; 
+}
+
+.body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+/* about */
+
+.about-us {
+    padding: 50px 20px;
+    background-color: #111111;  
+    color: #fff8f8;  
+    text-align: center;
+    text-shadow: 7px 7px 5px rgba(3, 190, 174, 0.774);  
+    
+
+}
+
+.about-us .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+
+}
+
+
+
+
+/* cart */
+
+ 
+
+
+
+
+/* footer */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+
+.socialIcons a:hover{
+    background-color: rgba(17, 197, 182, 0.774);
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
