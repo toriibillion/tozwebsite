@@ -27,8 +27,8 @@
 
 ## 📡 روابط مهمة
 
-- 🎮 [انضم إلى الديسكورد](https://discord.gg/vSPZXq2ZEt)
-- 📷 [حساب الإنستقرام](https://www.instagram.com/ft.store0/)
+- 🎮 [انضم إلى الديسكورد](https://discord.gg/UD5RpsxRf)
+- 📷 [حساب الإنستقرام](https://www.instagram.com/)
 
 ## 📌 طريقة العرض
 
